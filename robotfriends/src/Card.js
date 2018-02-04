@@ -1,13 +1,18 @@
-import react from 'react';
+import React from 'react';
 
-const Card = () =>
+const Card = (props) => {
 return (
+    <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
+        <img alt='photo' src={ `https://robohash.org/${props.id}?100x100`}/>  
     <div>
-        <img alt = 'photo' src = ''>    
+        
+        <h3>{props.name}</h3>
+        <p>{props.email}</p>
     </div>
-    <div>
-        <h2>Arun </h2>
-        <p>arun@gmail.com</p>
+    
     </div>
 
 );
+}
+
+export default Card;
